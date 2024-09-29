@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ubuntu-desktop:
+    image: dorowu/ubuntu-desktop-lxde-vnc
+    ports:
+      - "8080:80"
+    volumes:
+      - ubuntu-data:/root
+      - ./shared:/shared  # Mount the shared folder from the project directory
+    environment:
+      - VNC_PASSWORD=yourpassword
+    restart: always
+
+volumes:
+  ubuntu-data:
