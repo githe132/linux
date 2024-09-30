@@ -7,8 +7,6 @@ services:
     volumes:
       - ubuntu-data:/root
       - ./shared:/shared  # Mount the shared folder from the project directory
-    environment:
-      - VNC_PASSWORD=yourpassword
     restart: always
 
 volumes:
